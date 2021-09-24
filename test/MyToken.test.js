@@ -10,9 +10,8 @@ contract("Token Test", function(accounts) {
     const [ initialHolder, recipient, anotherAccount ] = accounts;
 
     beforeEach(async () => {
-    this.myToken = await Token.new(process.env.INITIAL_TOKENS);
-    });
-
+        this.myToken = await Token.new(process.env.INITIAL_TOKENS);
+        });
 
     it("All tokens should be in my account", async () => {
     //let instance = await Token.deployed();
@@ -44,5 +43,5 @@ contract("Token Test", function(accounts) {
         //check if the balance is still the same
         return expect(instance.balanceOf(initialHolder)).to.eventually.be.a.bignumber.equal(balanceOfAccount);
   
-      });
+      });  
 });
