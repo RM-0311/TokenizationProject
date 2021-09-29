@@ -85,6 +85,7 @@ class App extends Component {
         
         <h2>Enable your account</h2>
         Address to allow: <input type="text" name="kycAddress" value={this.state.kycAddress} onchange={this.handleInputChange} />
+        <button type="button" onCLick={this.handleKycSubmit}>Add Address to Whitelist</button>
       </div>
     );
   }
